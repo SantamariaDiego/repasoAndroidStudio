@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">repaso1</string>
+    <string name="lblTitulo">App contactos</string>
 </resources>
