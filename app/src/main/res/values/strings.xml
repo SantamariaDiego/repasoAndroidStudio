@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">repaso1</string>
     <string name="lblTitulo">App contactos</string>
+    <string name="txtInsertar">Insertar</string>
+    <string name="txtEliminar">Eliminar</string>
+
+    <string name="lblTitulo2">Insertar Contacto</string>
+    <string name="txtNombre">Ingrese un nombre</string>
+    <string name="txtApellido">Ingrese un apellido</string>
+    <string name="txtTelefono">Ingrese un telefono</string>
+    <string name="btnTXTAgregar">Agregar</string>
+    <string name="btnTXTCancelar">Cancelar</string>
+
 </resources>

@@ -2,27 +2,28 @@ package com.example.repaso1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import com.example.repaso1.Datos.ContactosDAL;
 import com.example.repaso1.Datos.ContactosDAL2;
+import com.example.repaso1.Datos.PersistenciaDatos;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class listarActivity extends AppCompatActivity {
     private ListView lv_datos;
     private ArrayList<String> listaContactos;
     private ArrayAdapter<String> adaptador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_listar);
         ContactosDAL2 contactosDAL2 = new ContactosDAL2(this);
         contactosDAL2.open2();
         lv_datos = findViewById(R.id.lvContactos);
@@ -39,12 +40,5 @@ public class MainActivity extends AppCompatActivity {
 
         lv_datos.setAdapter(adapter);
     }
-    public void clickInsertar(View view){
-        Intent intent = new Intent(this,addActivity.class);
-        startActivity(intent);
-    }
-    public void clickListar(View view){
-        Intent intent = new Intent(this,listarActivity.class);
-        startActivity(intent);
-    }
+
 }

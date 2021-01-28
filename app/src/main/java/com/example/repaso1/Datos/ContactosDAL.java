@@ -22,6 +22,7 @@ public class ContactosDAL {
         sql.close();
     }
     public ArrayList<String> select(){
+        open();
         ArrayList<String> listaContactos = null;
         try {
             String sqlSelect="SELECT Codigo, Nombre, Apellido, Telefono FROM Contactos";

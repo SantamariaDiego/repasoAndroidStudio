@@ -17,9 +17,40 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <ListView
-        android:id="@+id/lv_datos"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="75dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clickInsertar"
+            android:paddingRight="60px"
+            android:text="@string/txtInsertar" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clickListar"
+            android:paddingLeft="10px"
+            android:text="@string/txtEliminar" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+        <ListView
+            android:id="@+id/lvContactos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
 
 </LinearLayout>

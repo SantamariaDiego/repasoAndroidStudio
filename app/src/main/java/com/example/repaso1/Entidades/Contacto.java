@@ -13,6 +13,7 @@ public class Contacto {
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.telefono = telefono;
     }
 
     public int getCodigo() {
