@@ -1,5 +1,7 @@
 package com.example.repaso1.Entidades;
 
+import java.io.Serializable;
+
 public class Contacto {
     private int codigo;
     private String nombre;

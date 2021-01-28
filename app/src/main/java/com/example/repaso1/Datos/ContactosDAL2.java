@@ -65,4 +65,34 @@ public class ContactosDAL2 {
         }
         return listaContactos;
     }
+    public int delete(int id) {
+        int count =0;
+        try {
+            count=sql.delete("Contactos","Codigo="+id,null);
+        }catch(Exception ex){
+            throw ex;
+        }
+        finally {
+            sql.close();
+        }
+        return count;
+    }
+    public int update(Contacto contacto){
+        // open();
+        int count =0;
+        try {
+            ContentValues row = new ContentValues();
+            row.put("Nombre",contacto.getNombre());
+            row.put("Apellido",contacto.getApellido());
+            row.put("Telefono", contacto.getTelefono());
+            row.put("Codigo",contacto.getCodigo());
+            count=sql.update("Contactos", row, "Codigo="+contacto.getCodigo(), null);
+        }catch(Exception ex){
+            throw ex;
+        }
+        finally {
+            sql.close();
+        }
+        return count;
+    }
 }

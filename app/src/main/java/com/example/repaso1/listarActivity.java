@@ -2,19 +2,14 @@ package com.example.repaso1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.example.repaso1.Datos.ContactosDAL;
 import com.example.repaso1.Datos.ContactosDAL2;
-import com.example.repaso1.Datos.PersistenciaDatos;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class listarActivity extends AppCompatActivity {
     private ListView lv_datos;

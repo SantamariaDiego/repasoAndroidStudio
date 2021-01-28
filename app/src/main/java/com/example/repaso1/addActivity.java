@@ -2,6 +2,7 @@ package com.example.repaso1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -35,10 +36,16 @@ public class addActivity extends AppCompatActivity {
 
         if (cantidad>0){
             Toast.makeText(this,"Contacto agregado",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
         }else{
             Toast.makeText(this,"El contacto no se pudo agregar",Toast.LENGTH_SHORT).show();
         }
         dal.close();
 
+    }
+    public void clickRegresar(View view){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 }

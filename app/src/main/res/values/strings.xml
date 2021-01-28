@@ -11,4 +11,7 @@
     <string name="btnTXTAgregar">Agregar</string>
     <string name="btnTXTCancelar">Cancelar</string>
 
+    <string name="btnTXTEliminar">Eliminar</string>
+    <string name="btnTXTActualizar">Actualizar</string>
+
 </resources>
